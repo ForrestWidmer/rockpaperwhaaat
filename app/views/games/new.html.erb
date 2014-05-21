@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-12 text-center">
+    <h1>Ready to play some Rock, Paper, Scissors?</h1>
+    <h1>If so, just select your sign and hit "Play!"</h1>  
+      <%= form_tag '/throw' do %>
+        <%= label_tag("Select your sign here.") %>
+        <br>
+        <%= select_tag :user, options_for_select(Game::OPTIONS) %>
+        <br>
+        <br>
+        <%= submit_tag "Play!", class: 'btn btn-success btn-lg' %>
+     <% end %>
+    </div>
+</div>
